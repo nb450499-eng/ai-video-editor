@@ -1,0 +1,23 @@
+{
+  "asset_id": "03/take_001",
+  "shot_id": "03",
+  "duration_ms": 5180,
+  "usable": true,
+  "windows": [
+    {
+      "window_id": "w1",
+      "source_in_ms": 1420,
+      "source_out_ms": 3710,
+      "events": {
+        "action_start_ms": 2040,
+        "result_first_visible_ms": 2910,
+        "result_hold_end_ms": 3710
+      },
+      "grade": "A",
+      "notes": "Complete action, clear result hold, no key occlusion."
+    }
+  ],
+  "reject_reasons": [],
+  "annotator": "annotatorA",
+  "annotated_at": "2026-06-24T16:40:00+08:00"
+}

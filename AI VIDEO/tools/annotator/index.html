@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>AI Clip Annotator</title>
+    <link rel="stylesheet" href="/static/styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="brand">
+        <span class="brand-mark">AC</span>
+        <div>
+          <h1>AI Clip Annotator</h1>
+          <p id="status">Idle</p>
+        </div>
+      </div>
+      <div class="toolbar">
+        <label>
+          Project
+          <select id="projectSelect"></select>
+        </label>
+        <label>
+          Annotator
+          <input id="annotatorInput" value="primary" autocomplete="off" />
+        </label>
+        <label>
+          FPS
+          <input id="fpsInput" type="number" min="1" max="240" step="1" value="30" />
+        </label>
+        <button id="saveButton" type="button" title="Save truth JSON">Save</button>
+      </div>
+    </header>
+
+    <main class="layout">
+      <aside class="sidebar">
+        <div class="panel-title">
+          <h2>Takes</h2>
+          <span id="takeCount">0</span>
+        </div>
+        <div id="takeList" class="take-list"></div>
+      </aside>
+
+      <section class="workspace">
+        <div class="video-shell">
+          <video id="video" controls playsinline></video>
+          <div class="timebar">
+            <span id="timeLabel">00:00.000</span>
+            <span id="assetLabel">No take selected</span>
+          </div>
+        </div>
+
+        <div class="spec-grid">
+          <section class="panel spec-panel">
+            <div class="panel-title">
+              <h2>Shot Spec</h2>
+              <span id="shotLabel">-</span>
+            </div>
+            <dl id="specView" class="spec-view"></dl>
+          </section>
+
+          <section class="panel reject-panel">
+            <div class="panel-title">
+              <h2>Reject</h2>
+              <label class="switch">
+                <input id="usableToggle" type="checkbox" checked />
+                <span>Usable</span>
+              </label>
+            </div>
+            <div id="rejectReasons" class="checks"></div>
+          </section>
+        </div>
+
+        <section class="panel">
+          <div class="panel-title">
+            <h2>Windows</h2>
+            <div class="button-row">
+              <button id="newWindowButton" type="button" title="New window">New</button>
+              <button id="deleteWindowButton" type="button" title="Delete current window">Delete</button>
+            </div>
+          </div>
+          <div id="windowList" class="window-list"></div>
+          <div id="issues" class="issues"></div>
+        </section>
+      </section>
+    </main>
+
+    <script src="/static/app.js"></script>
+  </body>
+</html>

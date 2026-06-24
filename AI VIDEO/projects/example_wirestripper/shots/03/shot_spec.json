@@ -1,0 +1,36 @@
+{
+  "shot_id": "03",
+  "folder": "shots/03",
+  "target_duration_ms": 2300,
+  "voice_text": "It strips the wire in one pull.",
+  "role": "product_demo",
+  "required_states": [
+    "tool and wire are clearly visible",
+    "wire insulation is intact before the action",
+    "wire core is clearly visible after the action"
+  ],
+  "required_events": [
+    "tool_grips_wire",
+    "pull_starts",
+    "insulation_removed",
+    "result_visible"
+  ],
+  "forbidden": [
+    "action starts in the middle",
+    "result is blocked by fingers",
+    "different wires are presented as one continuous action"
+  ],
+  "timing": {
+    "pre_roll_ms": 180,
+    "post_roll_ms": 450,
+    "min_result_hold_ms": 500,
+    "max_speed_change": 1.08
+  },
+  "sync_points": [
+    {
+      "voice_text": "one pull",
+      "visual_event": "pull_starts"
+    }
+  ],
+  "product_refs": []
+}

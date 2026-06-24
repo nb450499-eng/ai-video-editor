@@ -1,0 +1,7 @@
+{
+  "project_id": "example_wirestripper",
+  "product": "self-strip wire tool",
+  "shots_root": "shots",
+  "truth_root": "truth",
+  "shot_ids": ["03"]
+}
